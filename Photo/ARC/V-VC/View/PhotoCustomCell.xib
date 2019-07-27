@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lP1-wh-tbh" customClass="PhotoCustomCell" customModule="Photo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="324"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="326" height="324"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ckg-DU-kcw">
+                        <rect key="frame" x="0.0" y="0.0" width="326" height="324"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cMT-Jd-zan">
+                                <rect key="frame" x="0.0" y="0.0" width="326" height="324"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P55-eF-BnO">
+                                        <rect key="frame" x="0.0" y="0.0" width="326" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwK-aF-1YK" customClass="CustomLabel" customModule="Photo" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="0.0" width="310" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="MwK-aF-1YK" firstAttribute="leading" secondItem="P55-eF-BnO" secondAttribute="leading" constant="8" id="JOe-Zy-rEO"/>
+                                            <constraint firstAttribute="bottom" secondItem="MwK-aF-1YK" secondAttribute="bottom" id="OcF-Di-LFX"/>
+                                            <constraint firstAttribute="height" constant="35" id="UR9-c6-3Md"/>
+                                            <constraint firstAttribute="trailing" secondItem="MwK-aF-1YK" secondAttribute="trailing" constant="8" id="cLh-RJ-liW"/>
+                                            <constraint firstItem="MwK-aF-1YK" firstAttribute="top" secondItem="P55-eF-BnO" secondAttribute="top" id="yQG-r6-OSh"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="vZN-Ff-0fV">
+                                        <rect key="frame" x="0.0" y="51" width="326" height="273"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cMT-Jd-zan" secondAttribute="bottom" id="2Ab-0q-OVz"/>
+                            <constraint firstAttribute="trailing" secondItem="cMT-Jd-zan" secondAttribute="trailing" id="ATl-ev-D2l"/>
+                            <constraint firstItem="cMT-Jd-zan" firstAttribute="top" secondItem="Ckg-DU-kcw" secondAttribute="top" id="a9P-6Y-CXx"/>
+                            <constraint firstItem="cMT-Jd-zan" firstAttribute="leading" secondItem="Ckg-DU-kcw" secondAttribute="leading" id="uyA-lh-zlf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Ckg-DU-kcw" firstAttribute="top" secondItem="lP1-wh-tbh" secondAttribute="top" id="RXl-vd-c2q"/>
+                <constraint firstAttribute="trailing" secondItem="Ckg-DU-kcw" secondAttribute="trailing" id="eE0-3D-OOg"/>
+                <constraint firstAttribute="bottom" secondItem="Ckg-DU-kcw" secondAttribute="bottom" id="rAV-vE-8lY"/>
+                <constraint firstItem="Ckg-DU-kcw" firstAttribute="leading" secondItem="lP1-wh-tbh" secondAttribute="leading" id="svP-NP-Fu3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Kx3-7J-cGE"/>
+            <size key="customSize" width="326" height="322"/>
+            <connections>
+                <outlet property="userImage" destination="vZN-Ff-0fV" id="tno-5H-wgH"/>
+                <outlet property="userName" destination="MwK-aF-1YK" id="8bj-Db-Gcz"/>
+                <outlet property="usernameView" destination="P55-eF-BnO" id="1SR-2I-07B"/>
+            </connections>
+            <point key="canvasLocation" x="240.57971014492756" y="79.6875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="logo" width="125" height="120"/>
+    </resources>
+</document>

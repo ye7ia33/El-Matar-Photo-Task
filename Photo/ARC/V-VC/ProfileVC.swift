@@ -10,7 +10,8 @@ import UIKit
 
 class ProfileVC: UIViewController {
     fileprivate let imageVM = ImagesViewModel()
-
+    @IBOutlet weak var navBarView: UINavigationBar!
+    
     @IBOutlet weak var lblUserName: CustomLabel!{
         didSet{
             self.lblUserName.text = User.shared.name ?? ""
@@ -36,6 +37,20 @@ class ProfileVC: UIViewController {
     }
     
     
+    @IBAction func logoutButtonAction(_ sender: Any) {
+        let alertController = UIAlertController(title: "Logout", message: "are you sure?", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "Yes", style: .default) { (_) in
+            AuthenticationViewModel().logout()
+            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginNav = storyboard.instantiateViewController(withIdentifier: "loginNVC") as! UINavigationController
+            self.present(loginNav, animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "No", style: .default) { (_) in }
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+
+    }
     
     
 }

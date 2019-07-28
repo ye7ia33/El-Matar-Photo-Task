@@ -375,7 +375,7 @@
                                         <barButtonItem key="rightBarButtonItem" title="LOGOUT" id="PLa-kR-efk">
                                             <color key="tintColor" name="mainColor"/>
                                             <connections>
-                                                <action selector="F:" destination="7Q4-cP-GUl" id="UEa-N6-7Pi"/>
+                                                <action selector="logoutButtonAction:" destination="ute-QN-g88" id="03i-bi-PJg"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -440,11 +440,11 @@
                     <tabBarItem key="tabBarItem" title="" image="icContacts" id="5vx-dF-mCa"/>
                     <connections>
                         <outlet property="lblUserName" destination="Vix-Kf-b2H" id="Pz1-fj-ZEX"/>
+                        <outlet property="navBarView" destination="UJg-pk-5dZ" id="T3Y-Yd-dXj"/>
                         <outlet property="profileCollectionView" destination="5ub-sM-3VM" id="pQL-kC-69J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHl-Nu-7te" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="7Q4-cP-GUl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2545" y="1125"/>
         </scene>

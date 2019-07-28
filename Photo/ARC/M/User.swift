@@ -7,8 +7,25 @@
 //
 
 import Foundation
+import FirebaseAuth
+
 struct User {
-    var id : String
-    var name : String?
-    var images:[Image]?
+    static let shared = User()
+    
+    var id : String? {
+        get{
+            return Auth.auth().currentUser?.uid
+        }
+    }
+    
+    var name : String? {
+        get{
+            return Auth.auth().currentUser?.displayName
+        }
+    }
+    
+    
+    
+    
+    
 }

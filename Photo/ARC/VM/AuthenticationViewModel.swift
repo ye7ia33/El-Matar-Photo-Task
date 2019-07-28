@@ -13,12 +13,13 @@ class AuthenticationViewModel: ViewModel {
     
     lazy var currentUser = Auth.auth().currentUser
     
-    func login(WithEmailAddress email : String , password : String)  {
+    func login(WithEmailAddress email : String , password : String){
+        if email.isEmpty || password.isEmpty {return}
+        
         Auth.auth().signIn(withEmail: email, password: password) { (auth, err) in
             if auth != nil {
                 self.currentUser = auth?.user
             }else{
-                self.errorMessage = err?.localizedDescription
                 self.currentUser = nil
             }
             
@@ -30,21 +31,24 @@ class AuthenticationViewModel: ViewModel {
     func registration(whithUserName userName: String, email: String, password: String )  {
       
         Auth.auth().createUser(withEmail: email, password: password) { (auth, err) in
+            if err != nil{
+                self.currentUser = nil
+                self.completionHandler(err)
+                return
+            }
             if auth != nil, let user  = auth?.user  {
                 
                 let changeRequest = user.createProfileChangeRequest()
                 changeRequest.displayName = userName
                 changeRequest.commitChanges(completion: { (err) in
-                        self.currentUser = auth?.user
-                    self.completionHandler(nil)
+                    self.currentUser = auth?.user
+                    self.completionHandler(err)
                     return
                 })
                 
             }
         
-            self.currentUser = nil
-            self.completionHandler(err)
-            return
+        
         }
         
         

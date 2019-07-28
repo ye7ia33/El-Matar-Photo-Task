@@ -31,7 +31,16 @@
 		54A275C122EB398900D09117 /* ImagePrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275C022EB398900D09117 /* ImagePrivacy.swift */; };
 		54A275C322EB450800D09117 /* CodableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275C222EB450800D09117 /* CodableHandler.swift */; };
 		54A275C522EB47AB00D09117 /* ParseToJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275C422EB47AA00D09117 /* ParseToJson.swift */; };
-		54A275C722EB8DAE00D09117 /* FBUploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275C622EB8DAE00D09117 /* FBUploadImage.swift */; };
+		54A275D322EDC18C00D09117 /* LoginViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275D222EDC18C00D09117 /* LoginViewTest.swift */; };
+		54A275D722EDD33700D09117 /* ImageViewModelTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275D622EDD33700D09117 /* ImageViewModelTesting.swift */; };
+		54A275DA22EDE16F00D09117 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A275D922EDE16F00D09117 /* GTMSessionFetcher.framework */; };
+		54A275DC22EDE1A200D09117 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A275DB22EDE1A200D09117 /* GTMSessionFetcher.framework */; };
+		54A275DE22EDE44200D09117 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A275DD22EDE44200D09117 /* GoogleUtilities.framework */; };
+		54A275E022EDE44200D09117 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A275DF22EDE44200D09117 /* GoogleUtilities.framework */; };
+		54A275E222EDE52100D09117 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A275E122EDE52100D09117 /* IQKeyboardManagerSwift.framework */; };
+		54A275E422EDE52100D09117 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A275E322EDE52100D09117 /* Kingfisher.framework */; };
+		54A275E622EDE52100D09117 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A275E522EDE52100D09117 /* NVActivityIndicatorView.framework */; };
+		54A275E822EDE6C300D09117 /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275E722EDE6C300D09117 /* LoginTest.swift */; };
 		54F0FA5A22E8FCDD0065D99B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F0FA5922E8FCDD0065D99B /* AppDelegate.swift */; };
 		54F0FA5F22E8FCDD0065D99B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F0FA5D22E8FCDD0065D99B /* Main.storyboard */; };
 		54F0FA6122E8FCDF0065D99B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54F0FA6022E8FCDF0065D99B /* Assets.xcassets */; };
@@ -87,7 +96,21 @@
 		54A275C022EB398900D09117 /* ImagePrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrivacy.swift; sourceTree = "<group>"; };
 		54A275C222EB450800D09117 /* CodableHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHandler.swift; sourceTree = "<group>"; };
 		54A275C422EB47AA00D09117 /* ParseToJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseToJson.swift; sourceTree = "<group>"; };
-		54A275C622EB8DAE00D09117 /* FBUploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBUploadImage.swift; sourceTree = "<group>"; };
+		54A275C822EDB7FB00D09117 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A275CA22EDB7FB00D09117 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A275CC22EDB7FB00D09117 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A275CE22EDB7FB00D09117 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A275D022EDB7FB00D09117 /* FirebaseStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A275D222EDC18C00D09117 /* LoginViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTest.swift; sourceTree = "<group>"; };
+		54A275D622EDD33700D09117 /* ImageViewModelTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModelTesting.swift; sourceTree = "<group>"; };
+		54A275D922EDE16F00D09117 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A275DB22EDE1A200D09117 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A275DD22EDE44200D09117 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A275DF22EDE44200D09117 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A275E122EDE52100D09117 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A275E322EDE52100D09117 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A275E522EDE52100D09117 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A275E722EDE6C300D09117 /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
 		54F0FA5622E8FCDD0065D99B /* Photo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F0FA5922E8FCDD0065D99B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		54F0FA5E22E8FCDD0065D99B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54A275DA22EDE16F00D09117 /* GTMSessionFetcher.framework in Frameworks */,
 				7BA16082EC1DD9E662F689D4 /* Pods_Photo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +156,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54A275E222EDE52100D09117 /* IQKeyboardManagerSwift.framework in Frameworks */,
+				54A275E422EDE52100D09117 /* Kingfisher.framework in Frameworks */,
+				54A275E622EDE52100D09117 /* NVActivityIndicatorView.framework in Frameworks */,
+				54A275DE22EDE44200D09117 /* GoogleUtilities.framework in Frameworks */,
+				54A275E022EDE44200D09117 /* GoogleUtilities.framework in Frameworks */,
+				54A275DC22EDE1A200D09117 /* GTMSessionFetcher.framework in Frameworks */,
 				FA0D60633B1C6F7DC3509CFB /* Pods_PhotoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,7 +207,6 @@
 				54A2759422E9DC9200D09117 /* CustomString.swift */,
 				54A275AE22EA2FED00D09117 /* ImageView+Category.swift */,
 				54A275B622EA47D800D09117 /* ViewController+Category.swift */,
-				54A275C622EB8DAE00D09117 /* FBUploadImage.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -271,8 +300,10 @@
 		54F0FA6D22E8FCDF0065D99B /* PhotoTests */ = {
 			isa = PBXGroup;
 			children = (
-				54F0FA6E22E8FCDF0065D99B /* PhotoTests.swift */,
 				54F0FA7022E8FCDF0065D99B /* Info.plist */,
+				54F0FA6E22E8FCDF0065D99B /* PhotoTests.swift */,
+				54A275D222EDC18C00D09117 /* LoginViewTest.swift */,
+				54A275D622EDD33700D09117 /* ImageViewModelTesting.swift */,
 			);
 			path = PhotoTests;
 			sourceTree = "<group>";
@@ -281,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				54F0FA7922E8FCDF0065D99B /* PhotoUITests.swift */,
+				54A275E722EDE6C300D09117 /* LoginTest.swift */,
 				54F0FA7B22E8FCDF0065D99B /* Info.plist */,
 			);
 			path = PhotoUITests;
@@ -289,6 +321,18 @@
 		E4A49C03A25457CCCC4F0298 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				54A275E122EDE52100D09117 /* IQKeyboardManagerSwift.framework */,
+				54A275E322EDE52100D09117 /* Kingfisher.framework */,
+				54A275E522EDE52100D09117 /* NVActivityIndicatorView.framework */,
+				54A275DD22EDE44200D09117 /* GoogleUtilities.framework */,
+				54A275DF22EDE44200D09117 /* GoogleUtilities.framework */,
+				54A275DB22EDE1A200D09117 /* GTMSessionFetcher.framework */,
+				54A275D922EDE16F00D09117 /* GTMSessionFetcher.framework */,
+				54A275C822EDB7FB00D09117 /* FirebaseAuth.framework */,
+				54A275CA22EDB7FB00D09117 /* FirebaseCore.framework */,
+				54A275CC22EDB7FB00D09117 /* FirebaseFirestore.framework */,
+				54A275CE22EDB7FB00D09117 /* FirebaseInstanceID.framework */,
+				54A275D022EDB7FB00D09117 /* FirebaseStorage.framework */,
 				FEF2F682893ACBA2FAB05C3B /* Pods_Photo.framework */,
 				E19914C72D23C18268F68465 /* Pods_PhotoTests.framework */,
 				E9BE52479A25E776314822D1 /* Pods_PhotoUITests.framework */,
@@ -308,6 +352,7 @@
 				54F0FA5322E8FCDD0065D99B /* Frameworks */,
 				54F0FA5422E8FCDD0065D99B /* Resources */,
 				F09C456B7A569393195D2495 /* [CP] Embed Pods Frameworks */,
+				54A275D822EDE02300D09117 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -326,6 +371,7 @@
 				54F0FA6622E8FCDF0065D99B /* Sources */,
 				54F0FA6722E8FCDF0065D99B /* Frameworks */,
 				54F0FA6822E8FCDF0065D99B /* Resources */,
+				BB330AFEEE75405309572C5F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -345,6 +391,7 @@
 				54F0FA7122E8FCDF0065D99B /* Sources */,
 				54F0FA7222E8FCDF0065D99B /* Frameworks */,
 				54F0FA7322E8FCDF0065D99B /* Resources */,
+				44FE54A07AD4131813930DCA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -474,6 +521,99 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		44FE54A07AD4131813930DCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoUITests/Pods-PhotoUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher.default-Core/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities-Environment-Logger/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoUITests/Pods-PhotoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54A275D822EDE02300D09117 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+		BB330AFEEE75405309572C5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoTests/Pods-PhotoTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities-Environment-Logger/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoTests/Pods-PhotoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E0329F45CE9026B5C085552D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -506,8 +646,8 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Photo/Pods-Photo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher-Core/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities-00567490/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
@@ -559,7 +699,6 @@
 				543098E622E9211F007F75AD /* CustomLabel.swift in Sources */,
 				54A275A622E9EAF400D09117 /* SignUpVC.swift in Sources */,
 				54A275BB22EB1B2000D09117 /* ViewModel.swift in Sources */,
-				54A275C722EB8DAE00D09117 /* FBUploadImage.swift in Sources */,
 				54A2759322E9DBA500D09117 /* LoginVC.swift in Sources */,
 				54F0FA5A22E8FCDD0065D99B /* AppDelegate.swift in Sources */,
 				54A275BD22EB253900D09117 /* UserViewModel.swift in Sources */,
@@ -576,7 +715,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54A275D322EDC18C00D09117 /* LoginViewTest.swift in Sources */,
 				54F0FA6F22E8FCDF0065D99B /* PhotoTests.swift in Sources */,
+				54A275D722EDD33700D09117 /* ImageViewModelTesting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +726,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54F0FA7A22E8FCDF0065D99B /* PhotoUITests.swift in Sources */,
+				54A275E822EDE6C300D09117 /* LoginTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +926,32 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9GDF3DQEXP;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BoringSSL-GRPC/openssl_grpc.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth/FirebaseAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore/FirebaseCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/FirebaseFirestore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstanceID/FirebaseInstanceID.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseStorage/FirebaseStorage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Protobuf/Protobuf.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/grpcpp.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-Core/grpc.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library/leveldb.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb/nanopb.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuthInterop\"",
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					"${PODS_ROOT}/Firebase/Core/Sources",
+				);
 				INFOPLIST_FILE = PhotoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -805,6 +973,32 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9GDF3DQEXP;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BoringSSL-GRPC/openssl_grpc.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth/FirebaseAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore/FirebaseCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/FirebaseFirestore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstanceID/FirebaseInstanceID.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseStorage/FirebaseStorage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Protobuf/Protobuf.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/grpcpp.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-Core/grpc.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library/leveldb.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb/nanopb.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuthInterop\"",
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					"${PODS_ROOT}/Firebase/Core/Sources",
+				);
 				INFOPLIST_FILE = PhotoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -825,11 +1019,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9GDF3DQEXP;
 				INFOPLIST_FILE = PhotoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					"@rpath/GTMSessionFetcher.framework/GTMSessionFetcher",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.almtar.PhotoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -845,11 +1041,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9GDF3DQEXP;
 				INFOPLIST_FILE = PhotoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					"@rpath/GTMSessionFetcher.framework/GTMSessionFetcher",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.almtar.PhotoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

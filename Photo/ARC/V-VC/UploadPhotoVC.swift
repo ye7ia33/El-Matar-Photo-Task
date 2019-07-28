@@ -12,11 +12,13 @@ import Photos
 class UploadPhotoVC: UIViewController {
     @IBOutlet weak var userImage: UIImageView!{
         didSet{
+            self.userImage.image = nil
             self.userImage.isHidden = true
         }
     }
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var selectImage: UIButton!
+    @IBOutlet weak var switchView: UISwitch!
 
     var image : Image!
     var imagePrivacy : ImagePrivacy = .privateImage
@@ -27,6 +29,7 @@ class UploadPhotoVC: UIViewController {
             self.userImage.isHidden = false
         }
     }
+    
     
     
     
@@ -89,18 +92,20 @@ class UploadPhotoVC: UIViewController {
         })
     }
     
-    
+ 
     
     @IBAction func uploadImageButtonAction(_ sender: Any) {
- 
+        guard let uid = User.shared.id else { return }
+        guard let name = User.shared.name else { return }
+        
         self.showLoader()
         let imgVM = ImagesViewModel()
         if let imageData = self.userImage.image?.jpeg(.lowest) {
             var imageModel = Image()
             imageModel.imageData = imageData
-            imageModel.userName = UserViewModel.shared.user.name
+            imageModel.userName = name
             imageModel.imgaeStatus = self.imagePrivacy.rawValue
-            imgVM.uploadImage(ByUserId: UserViewModel.shared.user.id,image: imageModel)
+            imgVM.uploadImage(ByUserId: uid ,image: imageModel)
             imgVM.completionHandler = {
                 err in
                 self.hideLoader()
@@ -108,7 +113,9 @@ class UploadPhotoVC: UIViewController {
                     self.showAlert(WithMessage: "cant`t upload image.")
                     return
                 }
+                
                 self.showAlert(WithMessage: "image uploades success.")
+               self.resetView()
             }
             
         }
@@ -116,13 +123,19 @@ class UploadPhotoVC: UIViewController {
         
     }
     
+    private func resetView(){
+        self.userImage.isHidden = true
+        self.userImage.image = nil
+        self.viewContainer.isHidden = false
+        self.switchView.isOn = false
+    }
     
     @IBAction func logoutButtonAction(_ sender: Any) {
         let userAuth = AuthenticationViewModel()
         userAuth.logout()
         userAuth.completionHandler = {
             err in
-                   
+            
         }
     }
 

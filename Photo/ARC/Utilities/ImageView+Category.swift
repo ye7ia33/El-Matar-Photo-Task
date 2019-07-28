@@ -12,14 +12,14 @@ import Kingfisher
 extension UIImageView {
     
         func loadImageFromUrl (imgUrl : String){
-            let encoding : String = imgUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-            let url = URL(string: encoding )
+//            let encoding : String = imgUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            let url = URL(string: imgUrl )
             let processor = DownsamplingImageProcessor(size: self.frame.size) >> RoundCornerImageProcessor(cornerRadius: 0)
             self.kf.indicatorType = .activity
 
             self.kf.setImage(
                 with: url,
-                placeholder: UIImage(named: "default-image"),
+                placeholder: nil,
                 options: [
                     .processor(processor),
                     .scaleFactor(UIScreen.main.scale),

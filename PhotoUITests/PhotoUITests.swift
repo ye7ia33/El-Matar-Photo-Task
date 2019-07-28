@@ -9,7 +9,8 @@
 import XCTest
 
 class PhotoUITests: XCTestCase {
-
+    let app = XCUIApplication()
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
@@ -31,4 +32,48 @@ class PhotoUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
+    func testLunchScreen(){
+        app.launch()
+    }
+    
+    func testHomeVC()  {
+        app.launch()
+        
+        let completedExpectation = expectation(description: "Completed")
+        completedExpectation.isInverted = true
+        waitForExpectations(timeout: 10, handler: nil)
+        
+        let homeView = app.otherElements["homeView"]
+        XCTAssertTrue(homeView.exists)
+
+        let homeCollectionView = app.collectionViews["homeCollectionView"]
+        XCTAssertTrue(homeCollectionView.exists)
+        
+        let cells = XCUIApplication().collectionViews.cells
+        if cells.count != 0 {
+            let firstCell = cells.element(boundBy: 0)
+            XCTAssertTrue(firstCell.exists)
+            // to expand cell
+            firstCell.tap()
+            // return cell to current size
+            firstCell.tap()
+            
+            self.testingPullToRefresh(firstCell: homeCollectionView)
+        }else{
+            self.testingPullToRefresh(firstCell: homeCollectionView)
+        }
+        app.swipeUp()
+        app.swipeUp()
+        app.swipeDown()
+        
+    }
+    func testingPullToRefresh(firstCell : XCUIElement ){
+        let start = firstCell.coordinate(withNormalizedOffset:CGVector(dx: 0, dy: 0))
+        let finish = firstCell.coordinate(withNormalizedOffset: CGVector(dx: 0, dy: 3))
+        start.press(forDuration: 0.1, thenDragTo: finish)
+        
+    }
+    
+    
+    
 }

@@ -7,7 +7,25 @@
 		<key>Photo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>22</integer>
+			<integer>25</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>54F0FA5522E8FCDD0065D99B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>54F0FA6922E8FCDF0065D99B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>54F0FA7422E8FCDF0065D99B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

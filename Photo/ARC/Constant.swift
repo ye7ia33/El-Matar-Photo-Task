@@ -8,5 +8,5 @@
 
 import Foundation
 let FIXED_FONT_NAME = "Wida Round Light Demo"
-
+let IMAGE_URL = "https://firebasestorage.googleapis.com/v0/b/photoshared-bf537.appspot.com/o/usersImages%2F"
 

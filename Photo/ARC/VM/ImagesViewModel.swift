@@ -12,7 +12,8 @@ import Firebase
 
 class ImagesViewModel: ViewModel {
     
-    var imageList = [Image]()
+    var imageList: Array = Array<Image>()
+    
     private let userRef = Firestore.firestore().collection("users")
     
     /*** GET IMAGE DEPINCE ON ImagePrivacy TYPE {PUBLIC / PRIVATE}
@@ -22,43 +23,41 @@ class ImagesViewModel: ViewModel {
      *      //Call Method
             getImages(privacy: .userImage ,byUserId: UserViewModel.shared.user.id)
      */
- 
-    func getImages(privacy : ImagePrivacy , byUserId userId : String? = nil){
+
+    func getImages(privacy: ImagePrivacy , byUserId userId : String? = nil){
+       
+        if privacy == .privateImage {
+            if userId == nil || userId?.isEmpty ?? true{
+               fatalError("IF privacy is equal private userID is required")
+            }
+               self.getUserImages(byUserID:userId!)
+                return
+            }
+
+           
         
-        if privacy == .userImage {
-            if let id = userId { self.getUserImages(byUserID:id) }
-            return
-        }
         self.getPublicImages()
     }
-    
     
     func uploadImage(ByUserId uId : String , image : Image){
         guard let imageData = image.imageData else{return}
         
-        let storage = Storage.storage()
-        let storageRef = storage.reference()
+        let storageRef = Storage.storage().reference(withPath: "usersImages")
+
         let imgName =  "\(uId)_\(arc4random())"
-        let imagesRef = storageRef.child("usersImages/\(imgName).jpeg")
+        let imagesRef = storageRef.child("\(imgName).jpeg")
         
         imagesRef.putData(imageData, metadata: nil) { (metadata, error) in
             guard let metadata = metadata else {
                 self.completionHandler(error)
                 return
             }
-            storageRef.downloadURL { (url, error) in
-                guard let downloadURL = url else {
-                    // Uh-oh, an error occurred!
-                    return
-                }
-                
-                print(downloadURL.absoluteString)
-                print(url)  
+            if let imgName = metadata.name {
+                let imgUrl = "\(IMAGE_URL)\(imgName)?alt=media"
+                self.insertNewImageToUser(byUserID: uId, imgStatus: image.imgaeStatus ?? 0, url: imgUrl, userName: image.userName ?? "")
+            }else{
+                self.completionHandler(nil)
             }
-            
-            
-            
-//            self.insertNewImageToUser(byUserID: uId, imgStatus: image.imgaeStatus ?? 0, url: metadata.path ?? "", userName: image.userName ?? "")
         }
     }
     
@@ -72,28 +71,41 @@ class ImagesViewModel: ViewModel {
      JUST CALL METHOD..
     */
    private func getPublicImages(){
-    
-        userRef.getDocuments() { (querySnapshot, err) in
+
+    userRef.getDocuments() { (querySnapshot, err) in
+        self.imageList.removeAll()
+
             if let err = err {
                 self.completionHandler(err)
             } else {
-                self.imageList.removeAll()
+
                 for document in querySnapshot!.documents {
                     
-                    self.userRef.document(document.documentID).collection("images").whereField("status", isEqualTo: 1).getDocuments(completion: {(querySnapshot, err) in
-                        if err != nil {
-                            self.completionHandler(err)
-                            return
+                    self.userRef.document(document.documentID)
+                        .collection("images")
+                        .whereField("status", isEqualTo: 1)
+                        .getDocuments(completion: {(querySnapshot, err) in
+                            if err != nil {
+                                self.completionHandler(err)
+                                return
                         }
                         for document in querySnapshot!.documents {
                             let data = document.data()
                             if let image = self.handelImageModel(imgObject: data) {
-                                self.imageList.append(image)
+                           let isContains =  self.imageList.contains(where: { (img) -> Bool in
+                                if img.imgUrl == image.imgUrl {return true}
+                                return false
+                                })
+                           
+                                isContains == false ? self.imageList.append(image) : nil
+                              
                             }
                             self.completionHandler(nil)
+
                         }
                     })
                 }
+               
             }
         }
     }
@@ -116,7 +128,7 @@ class ImagesViewModel: ViewModel {
             for document in querySnapshot!.documents {
                 let data = document.data()
                 if let image = self.handelImageModel(imgObject: data) {
-                    self.imageList.insert(image, at: 0)
+                    self.imageList.append(image)
                 }
             }
             self.completionHandler(nil)
@@ -131,20 +143,18 @@ class ImagesViewModel: ViewModel {
     
    private func insertNewImageToUser(byUserID uId : String , imgStatus : Int , url : String , userName : String){
          let img =  ["status" : imgStatus ,
-                     "url" : "dssdf\(url)",
+                     "url" : "\(url)",
                      "userName" :userName] as [String : AnyObject]
-        
-        let db = Firestore.firestore()
-        
-        let newImageRef = db.collection("users").document(uId).collection("images").document()
-        newImageRef.setData(img)
-            { err in
+      userRef.document(uId).setData(["lastUpdate" : Date()])
+       userRef.document(uId).collection("images").addDocument(data: img, completion: { (err) in
                     if let err = err {
                         self.completionHandler(err)
                     } else {
                         self.completionHandler(nil)
                     }
-                }
+        
+        })
     }
+    
     
 }

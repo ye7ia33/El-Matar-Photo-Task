@@ -21,7 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
           self.setupIQKeyboard()
-        
+      /*  do{
+            try Auth.auth().signOut()
+        }catch {
+            
+        }*/
         
         if Auth.auth().currentUser != nil {
             let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

@@ -13,27 +13,31 @@ class ProfileVC: UIViewController {
 
     @IBOutlet weak var lblUserName: CustomLabel!{
         didSet{
-            self.lblUserName.text = UserViewModel.shared.user.name
+            self.lblUserName.text = User.shared.name ?? ""
         }
     }
-    
-    
-    
+
     fileprivate let collectionViewIdentifier  = "PhotoCustomCell"
     @IBOutlet weak var profileCollectionView: UICollectionView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let nib = UINib(nibName: "PhotoCustomCell" , bundle: nil)
         self.profileCollectionView.register(nib, forCellWithReuseIdentifier: self.collectionViewIdentifier)
          self.showLoader()
-        self.imageVM.getImages(privacy: .userImage ,byUserId: UserViewModel.shared.user.id)
+        self.imageVM.getImages(privacy: .privateImage ,byUserId: User.shared.id)
         self.imageVM.completionHandler = {
             err in
             self.profileCollectionView.reloadData()
             self.hideLoader()
         }
+        
     }
+    
+    
+    
+    
 }
 
 extension ProfileVC : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
@@ -50,8 +54,8 @@ extension ProfileVC : UICollectionViewDataSource, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // SEG
-                performSegue(withIdentifier: "goToEditPhoto", sender: nil)
+  
+        performSegue(withIdentifier: "goToEditPhoto", sender: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

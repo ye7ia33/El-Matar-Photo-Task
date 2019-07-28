@@ -103,7 +103,11 @@ PODS:
     - gRPC-Core/Interface (= 1.21.0)
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
+  - GTMSessionFetcher (1.2.2):
+    - GTMSessionFetcher/Full (= 1.2.2)
   - GTMSessionFetcher/Core (1.2.2)
+  - GTMSessionFetcher/Full (1.2.2):
+    - GTMSessionFetcher/Core (= 1.2.2)
   - IQKeyboardManagerSwift (6.4.0)
   - Kingfisher (5.7.0)
   - leveldb-library (1.20)
@@ -123,6 +127,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore
   - Firebase/Storage
+  - GTMSessionFetcher
   - IQKeyboardManagerSwift
   - Kingfisher
   - NVActivityIndicatorView
@@ -172,6 +177,6 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   Protobuf: 3f617b9a6e73605565086864c9bc26b2bf2dd5a3
 
-PODFILE CHECKSUM: e52496c6f68db9d21da708c3be86c92b0ae5345d
+PODFILE CHECKSUM: 4ed5a300bd4d567e132a240b3f525c3168ab92eb
 
 COCOAPODS: 1.6.0

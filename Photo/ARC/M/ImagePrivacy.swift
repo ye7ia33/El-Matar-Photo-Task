@@ -11,13 +11,10 @@ import Foundation
 enum ImagePrivacy {
     case publicImage
     case privateImage
-    case userImage
-    
-    
+
     var rawValue: Int {
         switch self {
         case .privateImage: return 0
-        case .userImage: return 0
         case .publicImage: return 1
         }
     }

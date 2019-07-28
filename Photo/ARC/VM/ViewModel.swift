@@ -9,10 +9,6 @@
 import UIKit
 
 class ViewModel: NSObject {
-    var errorMessage : String?
+    
     var completionHandler:(_ error : Error? )->Void = {_ in}
-    
-    
-
-
 }

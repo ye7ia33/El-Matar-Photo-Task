@@ -8,15 +8,15 @@
 
 import UIKit
 import FirebaseAuth
-class UserViewModel: ViewModel {
-
-   static let shared = UserViewModel()
+//class UserViewModel: ViewModel {
+//
+//   static let shared = UserViewModel()
+//
+//    let user : User = {
+//        let user = User(id: Auth.auth().currentUser?.uid ?? "", name: Auth.auth().currentUser?.displayName ?? "")
+//        return user
+//    }()
+//
+//
     
-    let user : User = {
-        let user = User(id: Auth.auth().currentUser?.uid ?? "", name: Auth.auth().currentUser?.displayName ?? "", images: nil)
-        return user 
-    }()
-    
-    
-    
-}
+//}

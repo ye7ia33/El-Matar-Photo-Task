@@ -31,12 +31,13 @@ class SignUpVC: UIViewController {
                 auth.registration(whithUserName: name , email: email, password: password)
                 auth.completionHandler = {
                     err in
+                    self.hideLoader()
                     if err != nil {
-                        self.performSegue(withIdentifier: "goToTabViewController", sender: nil)
-                    }else{
                         self.showAlert(WithMessage: err?.localizedDescription ?? "Error.")
+                        return
                     }
-                   self.hideLoader()
+                    self.performSegue(withIdentifier: "goToTabViewController", sender: nil)
+                  
 
                 }
                

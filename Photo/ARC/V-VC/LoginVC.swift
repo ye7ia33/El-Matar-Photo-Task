@@ -12,6 +12,12 @@ class LoginVC: UIViewController {
 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.accessibilityIdentifier = "loginView"
+
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -36,6 +42,7 @@ class LoginVC: UIViewController {
                     return
                 }
                 self.hideLoader()
+
                 self.showAlert(WithMessage: "<#T##String#>")
                 
             }
@@ -44,14 +51,14 @@ class LoginVC: UIViewController {
     
   
     private func inputIsValid()-> Bool{
-        let email = self.txtEmail.text ?? ""
         
-        if email.isEmpty {
+        
+        if  self.txtEmail.text?.isEmpty ?? true {
             self.showAlert(WithMessage: "Enter Your Email Address.")
             return false
         }
         
-        if email.isValidEmail() == false {
+        if self.txtEmail.text?.isValidEmail() == false {
             self.showAlert(WithMessage: "Insert Right Email Format.")
 
             return false

@@ -32,7 +32,10 @@ class PhotoCustomCell: UICollectionViewCell {
 
             
         }
-         self.userImage.loadImageFromUrl(imgUrl:image.imgUrl ?? "")
+        DispatchQueue.main.async {
+        self.userImage.loadImageFromUrl(imgUrl:image.imgUrl ?? "")
+        }
+        
     }
 
     

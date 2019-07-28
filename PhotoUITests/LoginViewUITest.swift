@@ -8,7 +8,7 @@
 
 import XCTest
 
-class LoginViewTest: XCTestCase {
+class LoginViewUITest: XCTestCase {
     let app = XCUIApplication()
     
     override func setUp() {

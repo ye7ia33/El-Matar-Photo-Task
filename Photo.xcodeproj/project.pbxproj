@@ -30,7 +30,7 @@
 		54A275C122EB398900D09117 /* ImagePrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275C022EB398900D09117 /* ImagePrivacy.swift */; };
 		54A275C322EB450800D09117 /* CodableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275C222EB450800D09117 /* CodableHandler.swift */; };
 		54A275C522EB47AB00D09117 /* ParseToJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275C422EB47AA00D09117 /* ParseToJson.swift */; };
-		54A275D322EDC18C00D09117 /* LoginViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275D222EDC18C00D09117 /* LoginViewTest.swift */; };
+		54A275D322EDC18C00D09117 /* AuthTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275D222EDC18C00D09117 /* AuthTest.swift */; };
 		54A275D722EDD33700D09117 /* ImageViewModelTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275D622EDD33700D09117 /* ImageViewModelTesting.swift */; };
 		54A275DA22EDE16F00D09117 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A275D922EDE16F00D09117 /* GTMSessionFetcher.framework */; };
 		54A275DC22EDE1A200D09117 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A275DB22EDE1A200D09117 /* GTMSessionFetcher.framework */; };
@@ -39,7 +39,7 @@
 		54A275E222EDE52100D09117 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A275E122EDE52100D09117 /* IQKeyboardManagerSwift.framework */; };
 		54A275E422EDE52100D09117 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A275E322EDE52100D09117 /* Kingfisher.framework */; };
 		54A275E622EDE52100D09117 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A275E522EDE52100D09117 /* NVActivityIndicatorView.framework */; };
-		54A275E822EDE6C300D09117 /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275E722EDE6C300D09117 /* LoginTest.swift */; };
+		54A275E822EDE6C300D09117 /* LoginViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A275E722EDE6C300D09117 /* LoginViewUITest.swift */; };
 		54F0FA5A22E8FCDD0065D99B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F0FA5922E8FCDD0065D99B /* AppDelegate.swift */; };
 		54F0FA5F22E8FCDD0065D99B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F0FA5D22E8FCDD0065D99B /* Main.storyboard */; };
 		54F0FA6122E8FCDF0065D99B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54F0FA6022E8FCDF0065D99B /* Assets.xcassets */; };
@@ -99,7 +99,7 @@
 		54A275CC22EDB7FB00D09117 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A275CE22EDB7FB00D09117 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A275D022EDB7FB00D09117 /* FirebaseStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		54A275D222EDC18C00D09117 /* LoginViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTest.swift; sourceTree = "<group>"; };
+		54A275D222EDC18C00D09117 /* AuthTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTest.swift; sourceTree = "<group>"; };
 		54A275D622EDD33700D09117 /* ImageViewModelTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModelTesting.swift; sourceTree = "<group>"; };
 		54A275D922EDE16F00D09117 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A275DB22EDE1A200D09117 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +108,7 @@
 		54A275E122EDE52100D09117 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A275E322EDE52100D09117 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A275E522EDE52100D09117 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		54A275E722EDE6C300D09117 /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
+		54A275E722EDE6C300D09117 /* LoginViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewUITest.swift; sourceTree = "<group>"; };
 		54F0FA5622E8FCDD0065D99B /* Photo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F0FA5922E8FCDD0065D99B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		54F0FA5E22E8FCDD0065D99B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -299,7 +299,7 @@
 			children = (
 				54F0FA7022E8FCDF0065D99B /* Info.plist */,
 				54F0FA6E22E8FCDF0065D99B /* PhotoTests.swift */,
-				54A275D222EDC18C00D09117 /* LoginViewTest.swift */,
+				54A275D222EDC18C00D09117 /* AuthTest.swift */,
 				54A275D622EDD33700D09117 /* ImageViewModelTesting.swift */,
 			);
 			path = PhotoTests;
@@ -309,7 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				54F0FA7922E8FCDF0065D99B /* PhotoUITests.swift */,
-				54A275E722EDE6C300D09117 /* LoginTest.swift */,
+				54A275E722EDE6C300D09117 /* LoginViewUITest.swift */,
 				54F0FA7B22E8FCDF0065D99B /* Info.plist */,
 			);
 			path = PhotoUITests;
@@ -711,7 +711,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54A275D322EDC18C00D09117 /* LoginViewTest.swift in Sources */,
+				54A275D322EDC18C00D09117 /* AuthTest.swift in Sources */,
 				54F0FA6F22E8FCDF0065D99B /* PhotoTests.swift in Sources */,
 				54A275D722EDD33700D09117 /* ImageViewModelTesting.swift in Sources */,
 			);
@@ -722,7 +722,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54F0FA7A22E8FCDF0065D99B /* PhotoUITests.swift in Sources */,
-				54A275E822EDE6C300D09117 /* LoginTest.swift in Sources */,
+				54A275E822EDE6C300D09117 /* LoginViewUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
